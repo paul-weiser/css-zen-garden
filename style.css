@@ -1,0 +1,407 @@
+@font-face {
+    font-family: Phenomena;
+    src: url('assets/fonts/Phenomena/Commercial/WEB/Phenomena-Regular.eot');
+    src: url('assets/fonts/Phenomena/Commercial/WEB/Phenomena-Regular.eot#iefix') format('embedded-opentype'),
+    url('assets/fonts/Phenomena/Commercial/WEB/Phenomena-Regular.woff2') format('woff2'),
+    url('assets/fonts/Phenomena/Commercial/WEB/Phenomena-Regular.woff') format('woff'),
+    url('assets/fonts/Phenomena/Commercial/TTF/Phenomena-Regular.ttf') format('truetype');
+}
+
+:root {
+    --primary-color: #F88C57;
+    --secondary-color: #834951;
+    --text-color: #e4cfd2;
+    --main-bg-color: #130b1c;
+    --main-bg-color-translucent-0: #130b1cfc;
+    --main-bg-color-translucent-1: #130b1cee;
+    --main-bg-color-translucent-2: #130b1ccc;
+    --main-bg-color-translucent-3: #130b1caa;
+    --main-bg-color-translucent-4: #130b1c99;
+    --accent-bg-color: #1e1423;
+    --accent-bg-color-translucent: #1e142360;
+}  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.5em;
+    color: var(--text-color);
+    background-image: url('./assets/img/lake.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+p {
+    line-height: 2em;
+}
+
+.page-wrapper {
+    display: grid;
+}
+
+.page-wrapper .intro {
+    grid-column-start: col-start 1;
+    grid-column-end: col-end 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.page-wrapper .intro header {
+    color: white;
+    text-align: left;
+    padding: 2em 1em 2em 1em;
+    background-color: var(--main-bg-color-translucent-0);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 3em #000;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 4.25em;
+}
+
+.page-wrapper .intro header h1 {
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 1em;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.page-wrapper .intro header h1::before {
+    content: "";
+    background-image: url(assets/img/logo.png);
+    width: 1.7em; 
+    height: 1.7em;
+    position: absolute;
+    right: 8.5em;
+    display: inline-block;
+    background-size: 100%;
+}
+
+
+.page-wrapper .intro header h2 {
+    font-weight: 100;
+}
+
+.page-wrapper .intro .summary {
+    padding: 20em 1em 10em 1em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-wrapper .intro .summary p {
+    text-align: center;
+    padding: 1em;
+    max-width: 40em;
+    box-shadow: 0 1em 2em var(--main-bg-color-translucent-3);
+    backdrop-filter: blur(10px);
+    font-size: 1.25em;
+    line-height: 2em;
+}
+
+.page-wrapper .intro .summary p:nth-child(1) {
+    border-radius: 1em;
+    background-color: var(--main-bg-color-translucent-2);
+}
+
+.page-wrapper .intro .summary p:nth-child(2) {
+    border-radius: 0 0 1em 1em;
+    background-color: var(--main-bg-color-translucent-4);
+}
+
+.page-wrapper .intro .summary p a {
+    color: var(--primary-color);
+    background-color: transparent;
+    padding: 0.5em;
+}
+
+.page-wrapper .intro .summary p a:hover {
+    color: var(--main-bg-color);
+    background-color: var(--primary-color);
+    transition: 0.2s ease-in-out;
+}
+
+.page-wrapper .intro .preamble::before {
+    content: "";
+    background-color: var(--main-bg-color-translucent-1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 15em;
+    position: absolute;
+    top: -5em;
+    transform: skew(0deg, 6deg);
+    box-shadow: 0 0 3em #000;
+    z-index: -100;
+}
+
+.page-wrapper .intro .preamble::after {
+    content: "";
+    background-color: var(--main-bg-color-translucent-1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 15em;
+    position: absolute;
+    top: -5em;
+    transform: skew(0deg, -6deg);
+    box-shadow: 0 0 3em #000;
+    z-index: -100;
+}
+
+.page-wrapper .intro .preamble {
+    position: relative;
+    padding: 3em;
+    box-shadow: 0 0 3em #000;
+    background: var(--main-bg-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-wrapper .intro .preamble p {
+    text-align: justify;
+    word-wrap: break-word;
+    max-width: 60em;
+}
+
+.page-wrapper .intro .preamble h3 {
+    margin-top: 0;
+}
+
+.page-wrapper .main {
+    grid-column-start: col-start 1;
+    grid-column-end: col-end 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background:var(--main-bg-color);
+    z-index: 2;
+}
+
+.page-wrapper .main h3, .page-wrapper .preamble h3 {
+    color: var(--primary-color);
+}
+
+.page-wrapper .preamble:nth-child(3) {
+    position: relative;
+}
+
+.page-wrapper .preamble p:nth-child(2)::before {
+    content: "";
+    background-image: url(assets/img/road.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 3em;
+    top: 2.5em;
+    width: 25em;
+    height: 25em;
+    position: absolute;
+    z-index: 3;
+}
+
+.page-wrapper .preamble p:nth-child(2)::after {
+    content: "";
+    background-image: url(assets/img/bulb.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 8em;
+    top: 3em;
+    width: 15em;
+    height: 15em;
+    position: absolute;
+    z-index: 3;
+}
+
+.page-wrapper aside.sidebar {
+    grid-column-start: col-start 2;
+    grid-column-end: col-end 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: var(--main-bg-color-translucent-1);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1em;
+}
+
+.page-wrapper aside.sidebar ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    backdrop-filter: blur(10px);
+}
+
+.page-wrapper aside.sidebar nav ul li::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100) brightness(10%);
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    transition: 0.2s ease-in;
+}
+
+.page-wrapper aside.sidebar nav ul li:hover::before {
+    filter: grayscale(0) blur(1px) brightness(50%);
+}
+
+.page-wrapper aside.sidebar .design-selection nav ul li:nth-child(1):before {
+    background-image: url('./assets/img/designs/mid_century_modern.png');
+}
+
+.page-wrapper aside.sidebar .design-selection nav ul li:nth-child(2):before {
+    background-image: url('./assets/img/designs/garments.png');
+}
+
+.page-wrapper aside.sidebar .design-selection nav ul li:nth-child(3):before {
+    background-image: url('./assets/img/designs/steel.png');
+}
+
+.page-wrapper aside.sidebar .design-selection nav ul li:nth-child(4):before {
+    background-image: url('./assets/img/designs/apothecary.png');
+}
+
+.page-wrapper aside.sidebar .design-selection nav ul li:nth-child(5):before {
+    background-image: url('./assets/img/designs/screen_filler.png');
+}
+
+.page-wrapper aside.sidebar .design-selection nav ul li:nth-child(6):before {
+    background-image: url('./assets/img/designs/fountain_kiss.png');
+}
+
+.page-wrapper aside.sidebar .design-selection nav ul li:nth-child(7):before {
+    background-image: url('./assets/img/designs/a_robot_named_jimmy.png');
+}
+
+.page-wrapper aside.sidebar .design-selection nav ul li:nth-child(8):before {
+    background-image: url('./assets/img/designs/verde_moderna.png');
+}
+
+.page-wrapper aside.sidebar ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: var(--main-bg-color-translucent-1);
+    position: relative;
+    z-index: 10;
+}
+
+.page-wrapper aside.sidebar .design-archives ul li:hover, 
+.page-wrapper aside.sidebar .zen-resources ul li:hover {
+    background-color: var(--accent-bg-color-translucent);
+    box-shadow: 0 0 0.5em var(--primary-color);
+}
+
+.page-wrapper aside.sidebar ul li a {
+    font-size: 1.2em;
+}
+
+
+.page-wrapper .main div {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+}
+
+.page-wrapper .main div:nth-child(odd) {
+    background-color: var(--accent-bg-color-translucent);
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Phenomena', sans-serif;
+    padding-top: 1em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+footer {
+    margin-top: 1em;
+    padding: 0.5em;
+    background: linear-gradient(to right, var(--main-bg-color), var(--accent-bg-color));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer a {
+    color: var(--secondary-color);
+    margin-left: 1em;
+    margin-right: 1em;
+    transition: 0.2s ease-in;
+    padding: 0.25em;
+    border-radius: 0.5em;
+    line-height: 1.5em;
+}
+
+footer a:hover {
+    color: var(--main-bg-color);
+    background-color: var(--secondary-color);
+}
+
+@media only screen and (max-device-width: 1900px) {
+    .page-wrapper .preamble p:nth-child(2)::before {
+        display: none;
+    }
+
+    .page-wrapper .preamble p:nth-child(2)::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-device-width: 1100px) {
+    .page-wrapper .main {
+        grid-column-end: col-end 3;
+    }
+
+    .page-wrapper aside.sidebar {
+        grid-column-start: col-start 1;
+        grid-column-end: col-end 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+}
+
+@media only screen and (max-device-width: 550px) {
+    .page-wrapper .intro .summary p:nth-child(1) {
+        border-radius: 1em 1em 0 0;
+    }
+    
+    body {
+        font-size: 80%;
+    }
+}
